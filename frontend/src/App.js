@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import ProductDetail from './pages/ProductDetail/productDetail';
 import './App.css';
 
 import { BrowserRouter, Route, Link, Routes, useLocation, useNavigate } from 'react-router-dom';
@@ -11,6 +12,7 @@ function App() {
 
     <Routes>
     <Route path='/' element={<Home />}/>
+    <Route path='/detail' element={<ProductDetail />} />
     </Routes>
    
     </BrowserRouter>

@@ -1,0 +1,15 @@
+.container{
+    .session {
+        .title{
+           padding: 0 1em;     
+        }
+        padding: 0 2em;
+        .listProduct{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:1em;
+            padding: 1em 0;
+            
+        }
+    }
+}

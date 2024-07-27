@@ -1,0 +1,18 @@
+.container{
+    
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+   
+    .header {
+        
+        color: yellow;
+    }
+    .productList {
+        display: flex;
+        gap:2em;
+        padding: 1em;
+        width: 95%;
+        overflow: auto;
+    }
+}  

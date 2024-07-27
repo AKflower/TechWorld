@@ -1,4 +1,41 @@
 .container {
     border: .5px solid silver;
     border-radius: 10px;
+    background-color: white;
+    padding-top: 1em;
+    width: max-content;
+    margin: 0 auto;
+    cursor: pointer;
+    &:hover .addCart{
+        display: flex;
+       
+    }
+    &:hover .content {
+        padding: 0 1em;
+
+    }
+    &:hover .content h2{
+        margin-top: 0;
+        margin-bottom: 0;
+        
+    }
+    .addCart{
+   
+        color: white;
+        background: blue;
+        border-bottom-left-radius: 10px;
+        justify-content: center;
+        border-bottom-right-radius: 10px;
+        font-weight: 600;
+        align-items: center;
+        display: none;
+        height: 3em;
+ 
+        transform: translateY(0.3em);
+        transition: transform 0.5s ease;
+    }
+    .content {
+        padding: 1em;
+
+    }
 }
