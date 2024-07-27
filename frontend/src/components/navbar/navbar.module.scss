@@ -1,0 +1,30 @@
+.container{
+    background-color: #474747;
+    padding: 1.5em 1em;
+    color: white;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    width: 70%;
+    position: absolute;
+    top: 20px;
+    border-radius: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 50em;
+    .logo{
+        font-family: 'Luckies Guy';
+        font-weight: 700;
+        padding: 0 2em;
+        border-right: 1px solid white;
+        font-size: 1.5em;
+    }
+    .tabContainer {
+        display: flex;
+        gap: 1em;
+        .tab {
+            cursor: pointer;
+        }
+    }
+
+}
