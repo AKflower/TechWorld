@@ -53,12 +53,14 @@ export default function Register () {
         try {
           
           const response = await accountService.insertUser(
-            formData.name,
-            formData.username,
-            formData.email,
-            formData.password,
-            formData.identifier,
-
+           { ho: formData.name,
+            ten:  formData.name,
+            tendangnhap: formData.username,
+            email: formData.email,
+            password: formData.password,
+            cmnd: formData.identifier,
+            maquyen: 7,
+            }
           );
           console.log('User registered:', response);
 
