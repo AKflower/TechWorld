@@ -42,11 +42,10 @@ export default function Login () {
         //   localStorage.setItem('id',data.employee_id)
     
           // Hiển thị thông báo thành công
-          toast.success('Đăng nhập thành công!');
+          // if (response.maquyen==7) 
           navigate('/home')
         } catch (error) {
           console.error('Login error:', error.message);
-          toast.error('Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin đăng nhập.');
           setIsLoading(false);
         } finally {
           setIsLoading(false);

@@ -41,3 +41,6 @@ code {
 .Toastify__toast-container {
   width: 300px;
 }
+.main {
+  margin: 0 0 0 20em;
+}

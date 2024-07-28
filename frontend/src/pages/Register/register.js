@@ -71,7 +71,6 @@ export default function Register () {
             email: '',
             reTypePassword: ''
           }));
-          toast.success('Đăng ký thành công!');
           setTimeout(function () {
             navigate(`/login`)
           },1000)
