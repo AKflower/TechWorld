@@ -14,7 +14,6 @@ public class TAIKHOAN {
     @Serial
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String TENDANGNHAP;
     private String MATKHAU;
     private String TRANGTHAI;
