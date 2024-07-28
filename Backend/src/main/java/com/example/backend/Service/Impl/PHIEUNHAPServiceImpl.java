@@ -15,4 +15,9 @@ public class PHIEUNHAPServiceImpl implements PHIEUNHAPService {
     public List<PHIEUNHAP> findAll() {
         return phieunhapRepository.findAll();
     }
+
+    @Override
+    public PHIEUNHAP save(PHIEUNHAP phieunhap) {
+        return phieunhapRepository.save(phieunhap);
+    }
 }

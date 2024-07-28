@@ -15,4 +15,9 @@ public class PHIEUTRAServiceImpl implements PHIEUTRAService {
     public List<PHIEUTRA> findAll() {
         return phieutraRepository.findAll();
     }
+
+    @Override
+    public PHIEUTRA save(PHIEUTRA phieutra) {
+        return phieutraRepository.save(phieutra);
+    }
 }

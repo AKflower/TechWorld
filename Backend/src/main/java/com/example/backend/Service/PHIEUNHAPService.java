@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface PHIEUNHAPService {
     List<PHIEUNHAP> findAll();
+
+    PHIEUNHAP save(PHIEUNHAP phieunhap);
 }

@@ -10,9 +10,19 @@ import java.util.List;
 @Service
 public class BINHLUANServiceImpl implements BINHLUANService {
     @Autowired
-    BINHLUANRepository BINHLUANRepository;
+    BINHLUANRepository binhluanRepository;
     @Override
     public List<BINHLUAN> findAll() {
-        return BINHLUANRepository.findAll();
+        return binhluanRepository.findAll();
+    }
+
+    @Override
+    public BINHLUAN save(BINHLUAN binhluan) {
+        return binhluanRepository.save(binhluan);
+    }
+
+    @Override
+    public List<BINHLUAN> findByProduct(int maSP) {
+        return binhluanRepository.findAllCommentByProduct(maSP);
     }
 }

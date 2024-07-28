@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface PHIEUTRAService {
     List<PHIEUTRA> findAll();
+
+    PHIEUTRA save(PHIEUTRA phieutra);
 }

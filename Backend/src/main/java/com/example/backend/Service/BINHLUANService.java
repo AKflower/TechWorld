@@ -6,4 +6,8 @@ import java.util.List;
 
 public interface BINHLUANService {
     List<BINHLUAN> findAll();
+
+    BINHLUAN save(BINHLUAN binhluan);
+
+    List<BINHLUAN> findByProduct(int maSP);
 }
