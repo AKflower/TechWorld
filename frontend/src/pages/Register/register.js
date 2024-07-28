@@ -1,11 +1,11 @@
 import styles from './register.module.scss'
-import Brand from '../../components/brand/brand'
 import Input from '../../components/input/input'
 import Button from '../../components/button/button'
 import { useState } from 'react';
-import authService from '../../services/authService';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+
 import {useNavigate} from 'react-router-dom';
+import accountService from '../../services/accountService';
 
 
 
@@ -14,10 +14,11 @@ export default function Register () {
     const [isLoading,setIsLoading] = useState(false)
     const [formData, setFormData] = useState({
         name: '',
-        phone: '',
+        username: '',
         email: '',
         password: '',
         reTypePassword: '',
+        identifier: '',
       });
       const navigate = useNavigate()
     
@@ -32,6 +33,7 @@ export default function Register () {
       };
     
       const handleSubmit = async (e) => {
+        console.log('test');
         e.preventDefault();
         setIsLoading(true);
         for (const field in formData) {
@@ -49,17 +51,19 @@ export default function Register () {
               return;
         }
         try {
-          const response = await authService.register(
+          
+          const response = await accountService.insertUser(
             formData.name,
-            formData.phone,
+            formData.username,
             formData.email,
             formData.password,
-            formData.reTypePassword,
+            formData.identifier,
+
           );
           console.log('User registered:', response);
 
           setFormData(() => ({
-            phone: '',
+            username: '',
             name: '',
             password:'',
             email: '',
@@ -78,12 +82,11 @@ export default function Register () {
     return (
         
         <div className={styles.container}>
-            <div className={styles.brandContainer}>
-                <Brand size={2}></Brand>
-            </div>
+            
             <form>
                     <Input label={'Họ và tên'} name="name" value={formData.name} onChange={handleChange}/>
-                    <Input label={'Số điện thoại'} name="phone" value={formData.phone} onChange={handleChange}/>
+                    <Input label={'CMND'} name="identifier" value={formData.identifier} onChange={handleChange}/>
+                    <Input label={'Tên đăng nhập'} name="username" value={formData.username} onChange={handleChange}/>
                     <Input label={'Email'} type={'email'} name="email" value={formData.email} onChange={handleChange}/>
                     <Input label={'Mật khẩu'} type={'password'} name="password" value={formData.password} onChange={handleChange}/>
                     <Input label={'Xác nhận mật khẩu'} type={'password'} name="reTypePassword" value={formData.reTypePassword} onChange={handleChange}/>

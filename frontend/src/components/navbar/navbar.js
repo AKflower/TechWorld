@@ -6,6 +6,7 @@ import { useNavigate,useLocation, Link} from 'react-router-dom';
 
 export default function Navbar () {
     const location = useLocation();
+    const navigate = useNavigate()
     const path = location.pathname;
     return (
         <div className={styles.container}>
@@ -31,7 +32,7 @@ export default function Navbar () {
               
             </div>
             <div style={{width:'6em',marginLeft:'auto'}}>
-                <Button name={'Đăng nhập'} color='silver'/>
+                <Button name={'Đăng nhập'} color='silver' onClick={() => navigate('/login')}/>
                 {0!=0 && <AddShoppingCartIcon />}
             </div>
         </div>

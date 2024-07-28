@@ -22,3 +22,22 @@ code {
 .f-col{
   flex-direction: column;
 }
+.Toastify__toast {
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.Toastify__toast--success {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.Toastify__toast--error {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.Toastify__toast-container {
+  width: 300px;
+}
