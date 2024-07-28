@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface DONDATHANGService {
     List<DONDATHANG> findAll();
+
+    DONDATHANG save(DONDATHANG dondathang);
 }

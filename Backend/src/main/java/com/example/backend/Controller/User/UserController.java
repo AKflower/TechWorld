@@ -16,6 +16,7 @@ public class UserController {
     PHIEUTRAService phieutraService;
     BINHLUANService binhluanService;
     DONHANGService donhangService;
+    DONDATHANGService dondathangService;
     KHACHHANGService khachhangService;
     TAIKHOANService taikhoanService;
 
@@ -67,6 +68,12 @@ public class UserController {
         return donhangService.save(donhang);
     }
 
+    // Tạo đơn đặt hàng
+    @PostMapping("/api/insertDonDatHang")
+    public DONDATHANG insertDonDatHang(@RequestBody DONDATHANG dondathang) {
+        return dondathangService.save(dondathang);
+    }
+
     // Tạo giỏ hàng
     @PostMapping("/api/insertGioHang")
     public KHACHHANG insertGioHang(@RequestBody KHACHHANG khachhang) {
@@ -77,6 +84,12 @@ public class UserController {
     @GetMapping("/api/getAllDonHang")
     public List<DONHANG> getAllDonHang() {
         return donhangService.findAll();
+    }
+
+    // Lấy toàn bộ đơn đặt hàng
+    @GetMapping("/api/getAllDonHang")
+    public List<DONDATHANG> getAllDonDatHang() {
+        return dondathangService.findAll();
     }
 
     // Lấy thông tin tài khoản theo role
