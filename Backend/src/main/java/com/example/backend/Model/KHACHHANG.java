@@ -26,6 +26,10 @@ public class KHACHHANG {
     private String EMAIL;
     private String TENDANGNHAP;
 
+    @OneToOne
+    @JoinColumn(name = "TENDANGNHAP", referencedColumnName = "TENDANGNHAP")
+    private TAIKHOAN taiKhoan;
+
     public KHACHHANG(int MAKH, String CMND, String HO, String TEN, String DIACHI, Date NGAYSINH, String SODIENTHOAI, String EMAIL, String TENDANGNHAP) {
         this.MAKH = MAKH;
         this.CMND = CMND;
