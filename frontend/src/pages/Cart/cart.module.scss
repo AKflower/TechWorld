@@ -1,0 +1,34 @@
+.container {
+    .main{
+        
+        margin: 8em 0;
+        padding: 1em;
+      
+        .header {
+            padding: 0 6em;
+            font-size: 1.5em;
+            margin-bottom: 2em;
+        }
+        .result{
+            display: flex;
+            justify-content: flex-end;
+            padding: 1em 2em;
+            gap: 1em;
+        }
+        table{
+            padding: 2em;
+            width: 100%;
+            th{
+                text-align: left;
+                padding: 1em;
+                border-bottom:1px solid silver;
+            }
+            td {
+                text-align: left;
+                padding: 1em;
+            }
+        }
+    
+    }
+   
+}

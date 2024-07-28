@@ -20,9 +20,18 @@
         font-size: 1.5em;
     }
     .tabContainer {
+        a {
+            text-decoration: none;
+            color: white;
+        }
         display: flex;
         gap: 1em;
         .tab {
+            cursor: pointer;
+        }
+        .tabActive {
+            font-weight: 500;
+            color: rgb(255 255 0);
             cursor: pointer;
         }
     }
