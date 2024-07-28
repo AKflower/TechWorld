@@ -19,6 +19,12 @@ public class TAIKHOAN {
     private String TRANGTHAI;
     private int MAQUYEN;
 
+    @OneToOne(mappedBy = "TAIKHOAN", cascade = CascadeType.ALL)
+    private NHANVIEN nhanVien;
+
+    @OneToOne(mappedBy = "TAIKHOAN", cascade = CascadeType.ALL)
+    private KHACHHANG khachHang;
+
     public TAIKHOAN(String TENDANGNHAP, String MATKHAU, String TRANGTHAI, int MAQUYEN) {
         this.TENDANGNHAP = TENDANGNHAP;
         this.MATKHAU = MATKHAU;
