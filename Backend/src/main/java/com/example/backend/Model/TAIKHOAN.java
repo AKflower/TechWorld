@@ -14,15 +14,12 @@ public class TAIKHOAN {
     @Serial
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int MATAIKHOAN;
     private String TENDANGNHAP;
     private String MATKHAU;
     private String TRANGTHAI;
     private int MAQUYEN;
 
-    public TAIKHOAN(int MATAIKHOAN,String TENDANGNHAP, String MATKHAU, String TRANGTHAI, int MAQUYEN) {
-        this.MATAIKHOAN = MATAIKHOAN;
+    public TAIKHOAN(String TENDANGNHAP, String MATKHAU, String TRANGTHAI, int MAQUYEN) {
         this.TENDANGNHAP = TENDANGNHAP;
         this.MATKHAU = MATKHAU;
         this.TRANGTHAI = TRANGTHAI;
