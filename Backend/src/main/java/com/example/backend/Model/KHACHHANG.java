@@ -25,8 +25,9 @@ public class KHACHHANG {
     private String SODIENTHOAI;
     private String EMAIL;
     private String TENDANGNHAP;
+    private String GIOHANG;
 
-    public KHACHHANG(int MAKH, String CMND, String HO, String TEN, String DIACHI, Date NGAYSINH, String SODIENTHOAI, String EMAIL, String TENDANGNHAP) {
+    public KHACHHANG(int MAKH, String CMND, String HO, String TEN, String DIACHI, Date NGAYSINH, String SODIENTHOAI, String EMAIL, String TENDANGNHAP, String GIOHANG) {
         this.MAKH = MAKH;
         this.CMND = CMND;
         this.HO = HO;
@@ -36,6 +37,7 @@ public class KHACHHANG {
         this.SODIENTHOAI = SODIENTHOAI;
         this.EMAIL = EMAIL;
         this.TENDANGNHAP = TENDANGNHAP;
+        this.GIOHANG = GIOHANG;
     }
 
     public KHACHHANG() {

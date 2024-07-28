@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface KHACHHANGService {
     List<KHACHHANG> findAll();
+
+    KHACHHANG save(KHACHHANG khachhang);
 }

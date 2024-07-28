@@ -15,4 +15,9 @@ public class DONHANGServiceImpl implements DONHANGService {
     public List<DONHANG> findAll() {
         return donhangRepository.findAll();
     }
+
+    @Override
+    public DONHANG save(DONHANG donhang) {
+        return donhangRepository.save(donhang);
+    }
 }

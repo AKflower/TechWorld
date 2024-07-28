@@ -25,4 +25,9 @@ public class TAIKHOANServiceImpl implements TAIKHOANService {
     public TAIKHOAN save(TAIKHOAN taikhoan) {
         return taikhoanRepository.save(taikhoan);
     }
+
+    @Override
+    public List<TAIKHOAN> findAllByRoleId(int roleId) {
+        return taikhoanRepository.findAllByRoleId(roleId);
+    }
 }
