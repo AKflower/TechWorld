@@ -1,10 +1,53 @@
 .container {
-    .productDetail {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 2em;
-        padding: 1em;
+    .main{
+        .header {
+            padding: 0 6em;
+            font-size: 1.5em;
+            margin-bottom: 2em;
+        }
         margin: 8em 0;
-    }
+        padding: 1em;
+        .productDetail {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 2em;
+            padding: 1em;
+            .image {
+                width: 60%;
+                height: 30em;
+                background-size: cover;
+                background-position: center;
+                margin: 0 auto;
+                border-radius: 10px;
+                border: 1px solid silver;
+            }
+            
+        }
+        .comment{
+            padding: 0 7em;
+            .btn{
+                padding: 1em 0;
+            }
+        }
+        .commentList{
+            padding: 2em 7em;
+            .commentItem{
+                padding: 2em 7em;
+                
+                .infor{
+                    display: flex;
+                    align-items: center;
+                    gap: 1em;
 
+                }
+                .content {
+                    border-bottom: 1px solid silver;
+
+                }
+            }
+           
+        }
+    
+    }
+   
 }
