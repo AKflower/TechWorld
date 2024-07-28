@@ -1,24 +1,20 @@
 import styles from './login.module.scss'
 // import Brand from '../../components/brand/brand'
-import Input from '../components/input/input';
+import Input from '../../components/input/input';
 // import Button from '../../components/button/button'
-import Button from '../components/button/button';
+import Button from '../../components/button/button';
 import { Link } from 'react-router-dom';
 import { useState ,useEffect} from 'react';
 // import authService from '../../services/authService';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
-import accountService from '../services/accountService';
+import accountService from '../../services/accountService';
 
 export default function Login () {
     const navigate = useNavigate()
     const [isLoading,setIsLoading] = useState(false)
-    const id = localStorage.getItem('id');
     useEffect(() => {
-      if (id) {
-        console.log(id);
-        navigate('/home')
-      }
+     
     },[])
    
     const [formData, setFormData] = useState({

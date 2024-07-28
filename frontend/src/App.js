@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import ProductDetail from './pages/ProductDetail/productDetail';
 import Cart from './pages/Cart/cart';
-import Login from './Login/login';
+import Login from './pages/Login/login';
 import './App.css';
 
 import { BrowserRouter, Route, Link, Routes, useLocation, useNavigate } from 'react-router-dom';

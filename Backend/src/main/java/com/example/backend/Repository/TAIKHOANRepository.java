@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TAIKHOANRepository extends JpaRepository<TAIKHOAN, Integer> {
-    @Query("SELECT tk FROM TAIKHOAN tk WHERE tk.TENDANGNHAP = :placeStartName")
+    @Query("SELECT tk FROM TAIKHOAN tk WHERE tk.TENDANGNHAP = :userName")
     TAIKHOAN findByUserName(String userName);
 }
