@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface DONHANGService {
     List<DONHANG> findAll();
+
+    DONHANG save(DONHANG donhang);
 }

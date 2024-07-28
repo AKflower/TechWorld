@@ -10,4 +10,6 @@ public interface TAIKHOANService {
     TAIKHOAN findByUserName(String userName);
 
     TAIKHOAN save(TAIKHOAN taikhoan);
+
+    List<TAIKHOAN> findAllByRoleId(int roleId);
 }

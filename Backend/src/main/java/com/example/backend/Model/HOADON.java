@@ -19,13 +19,13 @@ public class HOADON {
     private int SOHOADON;
     private Date NGAYTAO;
     private String MST;
-    private int MAHD;
+    private int MADH;
 
-    public HOADON(int SOHOADON, Date NGAYTAO, String MST, int MAHD) {
+    public HOADON(int SOHOADON, Date NGAYTAO, String MST, int MADH) {
         this.SOHOADON = SOHOADON;
         this.NGAYTAO = NGAYTAO;
         this.MST = MST;
-        this.MAHD = MAHD;
+        this.MADH = MADH;
     }
 
     public HOADON() {

@@ -15,4 +15,9 @@ public class KHACHHANGServiceImpl implements KHACHHANGService {
     public List<KHACHHANG> findAll() {
         return khachhangRepository.findAll();
     }
+
+    @Override
+    public KHACHHANG save(KHACHHANG khachhang) {
+        return khachhangRepository.save(khachhang);
+    }
 }

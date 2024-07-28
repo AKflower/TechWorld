@@ -15,4 +15,9 @@ public class DONDATHANGServiceImpl implements DONDATHANGService {
     public List<DONDATHANG> findAll() {
         return dondathangRepository.findAll();
     }
+
+    @Override
+    public DONDATHANG save(DONDATHANG dondathang) {
+        return dondathangRepository.save(dondathang);
+    }
 }

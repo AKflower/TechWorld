@@ -13,11 +13,13 @@ public class AdminController {
     @Autowired
     SANPHAMService sanphamService;
 
+    // Lấy thông tin sản phẩm
     @GetMapping("/api/getProduct")
     public Optional<SANPHAM> getProduct(@RequestParam("id") int id) {
         return sanphamService.findById(id);
     }
 
+    // Tạo sản phẩm hoặc cập nhật sản phẩm
     @PostMapping("/api/insertProduct")
     public SANPHAM insertUser(@RequestBody SANPHAM sanpham) {
         return sanphamService.save(sanpham);

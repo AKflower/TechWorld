@@ -20,12 +20,14 @@ public class DONDATHANG {
     private Date NGAYDATHANG;
     private int MANCC;
     private int MANV;
+    private boolean TRANGTHAI;
 
-    public DONDATHANG(int MADDH, Date NGAYDATHANG, int MANCC, int MANV) {
+    public DONDATHANG(int MADDH, Date NGAYDATHANG, int MANCC, int MANV, boolean TRANGTHAI) {
         this.MADDH = MADDH;
         this.NGAYDATHANG = NGAYDATHANG;
         this.MANCC = MANCC;
         this.MANV = MANV;
+        this.TRANGTHAI = TRANGTHAI;
     }
 
     public DONDATHANG() {
