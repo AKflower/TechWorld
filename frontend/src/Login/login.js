@@ -8,6 +8,7 @@ import { useState ,useEffect} from 'react';
 // import authService from '../../services/authService';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import accountService from '../services/accountService';
 
 export default function Login () {
     const navigate = useNavigate()
@@ -36,26 +37,24 @@ export default function Login () {
         e.preventDefault();
         setIsLoading(true);
     
-        // try {
-        //   const response = await authService.login(formData.username, formData.password);
-        //   console.log('Login success:', response);
+        try {
+          const response = await accountService.getUserInfo(formData.username);
+          
+          if (response.password == formData.password) localStorage.setItem('user',response);
+          
+        
+        //   localStorage.setItem('id',data.employee_id)
     
-        //   localStorage.setItem('token', response.token);
-        //   localStorage.setItem('name', response.name);
-        //   localStorage.setItem('id',response.id);
-        //   localStorage.setItem('role',response.role);
-        // //   localStorage.setItem('id',data.employee_id)
-    
-        //   // Hiển thị thông báo thành công
-        //   toast.success('Đăng nhập thành công!');
-        //   navigate('/home')
-        // } catch (error) {
-        //   console.error('Login error:', error.message);
-        //   toast.error('Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin đăng nhập.');
-        //   setIsLoading(false);
-        // } finally {
-        //   setIsLoading(false);
-        // }
+          // Hiển thị thông báo thành công
+          toast.success('Đăng nhập thành công!');
+          navigate('/home')
+        } catch (error) {
+          console.error('Login error:', error.message);
+          toast.error('Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin đăng nhập.');
+          setIsLoading(false);
+        } finally {
+          setIsLoading(false);
+        }
       };
     return (
         
