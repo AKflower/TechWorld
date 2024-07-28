@@ -24,6 +24,8 @@ public class KHACHHANG {
     private Date NGAYSINH;
     private String SODIENTHOAI;
     private String EMAIL;
+
+    @Column(insertable = false, updatable = false)
     private String TENDANGNHAP;
 
     @OneToOne
