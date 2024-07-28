@@ -1,5 +1,6 @@
 package com.example.backend.Service.Impl;
 
+import com.example.backend.Model.SANPHAM;
 import com.example.backend.Model.TAIKHOAN;
 import com.example.backend.Repository.TAIKHOANRepository;
 import com.example.backend.Service.TAIKHOANService;
@@ -14,5 +15,15 @@ public class TAIKHOANServiceImpl implements TAIKHOANService {
     @Override
     public List<TAIKHOAN> findAll() {
         return taikhoanRepository.findAll();
+    }
+
+    @Override
+    public TAIKHOAN findByUserName(String userName) {
+        return taikhoanRepository.findByUserName(userName);
+    }
+
+    @Override
+    public TAIKHOAN save(TAIKHOAN taikhoan) {
+        return taikhoanRepository.save(taikhoan);
     }
 }
